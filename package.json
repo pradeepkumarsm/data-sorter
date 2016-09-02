@@ -1,0 +1,19 @@
+{
+  "name": "data-sorter",
+  "version": "1.0.0",
+  "description": "Used for sorting data, by default \"String\" type is considered for sorting",
+  "main": "sorter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradeepkumarsm/data-sorter.git"
+  },
+  "author": "Pradeep Kumar S M <pradeepkumar.sm999@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pradeepkumarsm/data-sorter/issues"
+  },
+  "homepage": "https://github.com/pradeepkumarsm/data-sorter#readme"
+}
