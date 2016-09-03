@@ -12,7 +12,7 @@
     "url": "git+https://github.com/pradeepkumarsm/data-sorter.git"
   },
   "files": [
-    "./dist"
+    "dist"
   ],
   "author": "Pradeep Kumar S M <pradeepkumar.sm999@gmail.com>",
   "license": "ISC",
