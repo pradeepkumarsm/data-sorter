@@ -38,7 +38,7 @@ module.exports = {
   resolve: {
     },
   plugins: [
-      new webpack.optimize.UglifyJsPlugin({
+    /*  new webpack.optimize.UglifyJsPlugin({
           minimize: true,
           comments: false,
           sourceMap: false,
@@ -63,7 +63,7 @@ module.exports = {
               side_effects: true,
               warnings: true
           }
-      }),
+      }),*/
       /*new CleanWebpackPlugin(['../../dtDist'], {
           root: process.cwd(),
           verbose: true
