@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["dataSorter"] = factory();
+	else
+		root["dataSorter"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -46,35 +56,43 @@
 
 	"use strict";
 
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
 	var _lodash = __webpack_require__(1);
 
-	exports.default = function (data, sortType, sortOrder, key) {
-	    var actualKey = key;
-	    if (Array.isArray(key)) {
-	        var cloneKey = key.slice();
-	        actualKey = cloneKey.pop();
-	    }
-
-	    data.sort(function (param1, param2) {
+	var sortData = {
+	    getSortedData: function getSortedData(data, sortType, sortOrder, key) {
+	        var actualKey = key;
 	        if (Array.isArray(key)) {
-	            param1 = _.get(param1, cloneKey);
-	            param2 = _.get(param2, cloneKey);
+	            var cloneKey = key.slice();
+	            actualKey = cloneKey.pop();
 	        }
-	        switch (sortType) {
-	            case "Number":
-	                return (param1 && param1[actualKey] ? param1[actualKey] : 0) - (param2 && param2[actualKey] ? param2[actualKey] : 0);
-	                break;
-	            default:
-	                return (param1 && param1[actualKey] ? param1[actualKey] : "").localeCompare(param2 && param2[actualKey] ? param2[actualKey] : "");
-	                break;
-	        }
-	    });
 
-	    if (sortOrder === "DSC") {
-	        data.reverse();
+	        data.sort(function (param1, param2) {
+	            if (Array.isArray(key)) {
+	                param1 = _.get(param1, cloneKey);
+	                param2 = _.get(param2, cloneKey);
+	            }
+	            switch (sortType) {
+	                case "Number":
+	                    return (param1 && param1[actualKey] ? param1[actualKey] : 0) - (param2 && param2[actualKey] ? param2[actualKey] : 0);
+	                    break;
+	                default:
+	                    return (param1 && param1[actualKey] ? param1[actualKey] : "").localeCompare(param2 && param2[actualKey] ? param2[actualKey] : "");
+	                    break;
+	            }
+	        });
+
+	        if (sortOrder === "DSC") {
+	            data.reverse();
+	        }
+	        return data;
 	    }
-	    return data;
-		};
+	};
+
+		exports.default = sortData;
 
 /***/ },
 /* 1 */
@@ -16833,5 +16851,7 @@
 
 
 /***/ }
-/******/ ]);
+/******/ ])
+});
+;
 //# sourceMappingURL=data-sorter.js.map
