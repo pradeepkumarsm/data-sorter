@@ -1,4 +1,3 @@
-import {get} from 'lodash';
 
 const sortData = {
 	getSortedData : function(data, sortType, sortOrder, key){
