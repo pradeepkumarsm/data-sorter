@@ -32,5 +32,8 @@
   },
   "devDependencies": {
     "webpack": "^1.13.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
