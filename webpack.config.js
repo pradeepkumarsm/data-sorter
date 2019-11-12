@@ -9,7 +9,6 @@ console.log(process.env.NODE_ENV);
 
 
 module.exports = {
-
     devtool: 'cheap-module-source-map',
 
     entry: {
