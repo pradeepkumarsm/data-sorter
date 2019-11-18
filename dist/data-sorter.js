@@ -1,14 +1,5 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["dataSorter"] = factory();
-	else
-		root["dataSorter"] = factory();
-})(this, function() {
-return /******/ (function(modules) { // webpackBootstrap
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -87,13 +78,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            data.reverse();
 	        }
 	        return data;
+	    },
+
+	    newSortData: function newSortData() {
+	        Console.log('New Sort');
 	    }
 	};
 
 		exports.default = sortData;
 
 /***/ })
-/******/ ])
-});
-;
+/******/ ]);
 //# sourceMappingURL=data-sorter.js.map

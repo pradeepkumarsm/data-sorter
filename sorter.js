@@ -26,7 +26,11 @@ const sortData = {
             data.reverse();
         }
         return data;
-	}
+    },
+    
+    newSortData: function(){
+        Console.log('New Sort');
+    }
 };
 
 

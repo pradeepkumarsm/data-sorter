@@ -18,8 +18,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist',
         filename: 'data-sorter.js',
-        libraryTarget: 'umd',
-        library: 'dataSorter'
+        libraryTarget: 'commonjs2',
     },
 
     module: {
