@@ -2,6 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
+const WorkerPlugin = require('worker-plugin');
 
 
 console.log(__dirname);
@@ -40,6 +41,7 @@ module.exports = {
 
     resolve: {},
     plugins: [
+        new WorkerPlugin()
         /*  new webpack.optimize.UglifyJsPlugin({
          minimize: true,
          comments: false,
