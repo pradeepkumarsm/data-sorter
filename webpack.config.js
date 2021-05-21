@@ -41,37 +41,7 @@ module.exports = {
 
     resolve: {},
     plugins: [
-        new WorkerPlugin()
-        /*  new webpack.optimize.UglifyJsPlugin({
-         minimize: true,
-         comments: false,
-         sourceMap: false,
-         mangle:true,
-         compress: {
-         sequences: true,
-         properties: true,
-         dead_code: true,
-         drop_debugger: true,
-         unsafe: false,
-         conditionals: true,
-         comparisons: true,
-         evaluate: true,
-         booleans: true,
-         loops: true,
-         unused: true,
-         hoist_funs: true,
-         hoist_vars: false,
-         if_return: true,
-         join_vars: true,
-         cascade: true,
-         side_effects: true,
-         warnings: true
-         }
-         }),*/
-        /*new CleanWebpackPlugin(['../../dtDist'], {
-         root: process.cwd(),
-         verbose: true
-         }),*/
+        new WorkerPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify("production")
         })
