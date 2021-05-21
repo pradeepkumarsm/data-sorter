@@ -24,15 +24,16 @@ module.exports = {
     },
 
     module: {
-        loaders: [
-            {test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
+        rules: [
             {
-                test: /\.jsx?$/,
+              test: /\.m?js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
                 loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['react', 'es2015']
+                options: {
+                  presets: ['@babel/preset-env']
                 }
+              }
             }
         ]
     },
