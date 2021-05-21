@@ -2,6 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
+const CopyPlugin = require("copy-webpack-plugin");
 const WorkerPlugin = require('worker-plugin');
 
 
@@ -44,7 +45,15 @@ module.exports = {
         new WorkerPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify("production")
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+              {
+                from: path.resolve(__dirname, "copyFiles.js"),
+                to: '/dist',
+              },
+            ],
+        }),
     ]
 
 };
