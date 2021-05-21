@@ -5,7 +5,7 @@
   "main": "./dist/data-sorter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "node node_modules/protractor/bin/webdriver-manager update",
+    "postinstall": "copyfiles -u 1 dist/*.worker.js out",
     "build": "export NODE_ENV='production' && webpack"
   },
   "repository": {
@@ -21,7 +21,9 @@
     "url": "https://github.com/pradeepkumarsm/data-sorter/issues"
   },
   "homepage": "https://github.com/pradeepkumarsm/data-sorter#readme",
-  "dependencies": {},
+  "dependencies": {
+    "copyfiles": "^2.4.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
