@@ -1,6 +1,6 @@
 {
   "name": "data-sorter",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Used for sorting data, by default \"String\" type is considered for sorting",
   "main": "./dist/data-sorter.js",
   "scripts": {
