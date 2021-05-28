@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/pradeepkumarsm/data-sorter#readme",
   "dependencies": {
+    "@lowes/pharos": "^3.1.8",
     "copyfiles": "^2.4.1"
   },
   "devDependencies": {
